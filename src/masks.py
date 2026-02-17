@@ -7,7 +7,6 @@ import re
 
 def get_mask_card_number(card_number: str) -> str:
     """Функция, которая преобразует номер карты в маску"""
-    space_index: int = card_number.find(' ')
     card_mask: str = ""
     if not re.fullmatch(r"\d{16}", card_number):
         raise ValueError(f"Номер карты {card_number} не валиден." "Ожидается 16 цифр. ")
