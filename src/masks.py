@@ -10,7 +10,7 @@ def get_mask_card_number(card_number: str) -> str:
     card_mask: str = ""
     if not re.fullmatch(r"\d{16}", card_number):
         raise ValueError(f"Номер карты {card_number} не валиден." "Ожидается 16 цифр. ")
-    card_mask = f"{card_number[:4]} {card_number[4:6]}** **** {card_number[-4:]}" ''
+    card_mask = f"{card_number[:4]} {card_number[4:6]}** **** {card_number[-4:]}"
     return card_mask
 
 
