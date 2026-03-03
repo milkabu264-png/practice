@@ -22,6 +22,7 @@ def mask_accout_card(card: str) -> str:
 
 
 def get_date(date: str) -> str:
+    """Функция для обработки даты"""
     changed_date: str = date[:10]
     year: str
     month: str
