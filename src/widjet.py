@@ -11,13 +11,16 @@ def mask_account_card(card: str) -> str:
     Visa Platinum 7000792289606361, или Maestro 7000792289606361, или
     Счет 73654108430135874305.
     Для маскировки номера карты/счета используются ранее написанные функции из модуля masks."""
-    first_digit_index: int = (re.search(r"\d", card)).start()
+    match = re.search(r"\d", card)
+    if match is None:
+        raise ValueError("В строке нет номера карты или счёта")
+    first_digit_index: int = match.start()
     description: str = card[:first_digit_index].strip()
     card_number: str = card[first_digit_index:]
     if description == "Счет":
         masked_info: str = get_mask_account(card_number)
     else:
-        masked_info: str = get_mask_card_number(card_number)
+        masked_info = get_mask_card_number(card_number)
     return f"{description} {masked_info}"
 
 
