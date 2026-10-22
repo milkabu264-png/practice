@@ -5,7 +5,7 @@ import re
 from masks import get_mask_account, get_mask_card_number
 
 
-def mask_accout_card(card: str) -> str:
+def mask_account_card(card: str) -> str:
     """Функция для маскировки номера карты:
     Функция mask_account_cardпринимает на вход строку формата
     Visa Platinum 7000792289606361, или Maestro 7000792289606361, или
