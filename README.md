@@ -9,11 +9,11 @@
 
 1. Клонируйте репозиторий:
    ```bash
-   git clone  git clone https://github.com/milkabu264-png/practice.git
+   git clone https://github.com/milkabu264-png/practice.git
    ```
 2. Перейдите в папку проекта:
    ```bash
-   cd   cd practice
+   cd practice
    ```
 3. Установите зависимости с помощью Poetry:
    ```bash
