@@ -1,9 +1,9 @@
 [project]
 name = "homework-9-1"
 version = "0.1.0"
-description = ""
+description = "Виджет банковских операций клиента"
 authors = [
-    {name = "milkabubu",email = "milkabu264@gmail.com"}
+    {name = "milkabubu", email = "milkabu264@gmail.com"}
 ]
 readme = "README.md"
 requires-python = ">=3.14"
@@ -11,7 +11,7 @@ dependencies = [
 ]
 
 [tool.poetry]
-packages = [{include = "homework_9"}]
+packages = [{include = "src"}]
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
@@ -24,9 +24,10 @@ lint = [
     "isort (>=7.0.0,<8.0.0)",
     "mypy (>=1.19.1,<2.0.0)"
 ]
+
 # ========== Black - форматировщик ==========
 [tool.black]
-# Длина строки (максимум 88 символов)
+# Максимальная длина строки
 line-length = 119
 
 # ========== isort - сортировщик импортов ==========
@@ -37,9 +38,6 @@ line_length = 119
 
 # ========== mypy - проверка типов ==========
 [tool.mypy]
-# Версия Python
-python_version = "3.8"
-
 exclude = [
     "venv/",           # Исключаем виртуальное окружение
     ".venv/",          # Альтернативное название виртуального окружения
@@ -51,6 +49,6 @@ exclude = [
     ".git/",           # Папка Git
 ]
 
-# Основные проверки (минимум для начала)
-disallow_untyped_defs = true  # Все функции должны иметь типы
+# Основные проверки
+disallow_untyped_defs = true   # Все функции должны иметь аннотации типов
 ignore_missing_imports = true  # Игнорируем отсутствующие импорты
